@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "BEE(Bookmark Easy Editor)",
+  "description": "Bookmark Easy Editor",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "bee.png",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "bee.png",
+    "32": "bee.png",
+    "48": "bee.png",
+    "128": "bee.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "bookmarks",
+    "chrome://favicon/",
+    "<all_urls>",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

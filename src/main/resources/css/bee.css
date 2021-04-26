@@ -1,0 +1,275 @@
+//custom
+ol,
+ul,
+dl {
+    list-style: none;
+    padding-left: 15px;
+}
+
+span .directory-list {
+    height: 20px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    write-space: nowrap;
+}
+
+#topPanel {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+}
+
+#searchEditors {
+    width: 80%;
+    padding: 5px;
+    display: grid;
+}
+
+#searchTitle {
+    width: 80%;
+}
+
+#bookmarkStatus {
+    width: 20%;
+}
+
+#searchButtonDiv {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#searchButton {
+    width: 90%;
+    height: 60%;
+}
+
+#firstLineEditor, #secondLineEditor {
+    width: 100%;
+    height: 50%;
+    padding: 3px;
+}
+
+#searchTitle {
+    width: 70%;
+}
+
+#bookmarks {
+    overflow: auto;
+    min-height: 100px;
+    max-height: 480px;
+    padding: 5px;
+}
+
+#progressRing {
+    overflow: hidden;
+    height: 100px;
+}
+
+#bottomPanel {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+#actionButtonDiv{
+    width: 50%;
+    height: 95%;
+    float: left;
+    padding-left: 10px;
+}
+
+#actionButtonDiv > .btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#countDiv {
+    width: 50%;
+    float: right;
+    text-align: right;
+    padding: 10px;
+}
+
+.overlayBtn {
+    display: none; /* hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 60px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 98; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: lightgray; /* Set a background color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0.9;
+    width: 40px;
+    height: 40px;
+}
+
+.overlayBtn:hover {
+    background-color: coral; /* Add a coral background on hover */
+}
+
+.btnImage {
+    position: fixed;
+    align: center;
+    width: 30px;
+    height: 30px;
+    z-index: 99;
+    bottom: 66.5px;
+    right: 36.5px;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    width: 800px;
+    max-height: 600px;
+}
+
+button {
+    margin: 2px;
+}
+
+#loader {
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 80px;
+}
+
+#loader .dot {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+
+#loader .dot::before {
+    border-radius: 100%:
+    content: "";
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    width: 40px;
+}
+
+#loader .dot:nth-child(7n+1) {
+    transform: rotate(45deg);
+}
+
+#loader .dot:nth-child(7n+1)::before {
+    animation: 0.8s linear 0.1s normal none infinite running load;
+    background: #00ff80 none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+2) {
+    transform: rotate(90deg);
+}
+
+#loader .dot:nth-child(7n+2)::before {
+    animation: 0.8s linear 0.2s normal none infinite running load;
+    background: #00ffea none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+3) {
+    transform: rotate(135deg);
+}
+
+#loader .dot:nth-child(7n+3)::before {
+    animation: 0.8s linear 0.3s normal none infinite running load;
+    background: #00aaff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+4) {
+    transform: rotate(180deg);
+}
+
+#loader .dot:nth-child(7n+4)::before {
+    animation: 0.8s linear 0.4s normal none infinite running load;
+    background: #0040ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+5) {
+    transform: rotate(225deg);
+}
+
+#loader .dot:nth-child(7n+5)::before {
+    animation: 0.8s linear 0.5s normal none infinite running load;
+    background: #2a00ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+6) {
+    transform: rotate(270deg);
+}
+
+#loader .dot:nth-child(7n+6)::before {
+    animation: 0.8s linear 0.6s normal none infinite running load;
+    background: #9500ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+7) {
+     transform: rotate(315deg);
+ }
+
+ #loader .dot:nth-child(7n+7)::before {
+     animation: 0.8s linear 0.7s normal none infinite running load;
+     background: magenta none repeat scroll 0 0;
+ }
+
+#loader .dot:nth-child(7n+8) {
+     transform: rotate(360deg);
+ }
+
+ #loader .dot:nth-child(7n+8)::before {
+     animation: 0.8s linear 0.8s normal none infinite running load;
+     background: #ff0095 none repeat scroll 0 0;
+ }
+
+ #loader .loading {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: 40px;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 85px;
+    top: 70px;
+    text-align: center;
+ }
+
+ @keyframes load {
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+ }
+
+.label-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 2px;
+}

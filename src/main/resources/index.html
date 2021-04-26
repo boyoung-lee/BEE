@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>BEE</title>
+
+    <script src="js/kotlin-1.4.10/kotlin.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/bee.css" />
+    <script src="BEE.js"></script>
+</head>
+<body>
+<div id="topPanel">
+    <div id="searchEditors">
+        <span id="firstLineEditor">
+            <input id="searchTitle" name="searchTitle">
+            <select id="bookmarkStatus" class=".dropdown-menu">
+                <option value="">All</option>
+                <option value="none">Active</option>
+                <option value="none">Dead</option>
+            </select>
+        </span>
+        <span id="secondLineEditor">
+            <label>from</label>
+            <input type="date" id="datepickerFrom" />
+            <label>to</label>
+            <input type="date" id="datepickerTo" />
+            <label id="periodFull">&ensp;<b>전체기간</b></label>
+        </span>
+    </div>
+    <div id="searchButtonDiv">
+        <button id="searchButton" class="btn btn-primary">Search</button>
+        <input id="expandAllChk" type="checkbox">Expand all</input>
+    </div>
+</div>
+<div id="middlePanel">
+    <div id="progressRing" class="container" hidden>
+        <div class="row">
+            <div id="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="loading">loading...</div>
+            </div>
+        </div>
+    </div>
+    <div id="bookmarks">
+    </div>
+</div>
+<div id="bottomPanel">
+    <div id="actionButtonsDiv">
+        <button id="deleteBtn" class="btn btn-primary">Delete</button>
+        <button id="moveBtn" class="btn btn-primary" disabled="disabled">Move</button>
+        <button id="exportBtn" class="btn btn-primary" disabled="disabled">Export</button>
+    </div>
+    <div id="countDiv">
+        <img src="icons/check_count.png" class="label-icon" /><label id="check-count"></label>
+        <img src="icons/search_count.png" class="label-icon" /><label id="search-count"></label>
+        <img src="icons/total_count.png" class="label-icon" /><label id="total-count"></label>
+    </div>
+</div>
+<button id="topBtn" class="overlayBtn" title="Go to top"><img src="icons/go_to_top.png" class="btnImage" /> </button>
+</body>
+</html>

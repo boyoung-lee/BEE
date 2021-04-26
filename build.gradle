@@ -1,0 +1,40 @@
+plugins {
+    id 'org.jetbrains.kotlin.js' version '1.4.10'
+}
+
+group 'org.kotlinMasters'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://dl.bintray.com/freewind/maven/' }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation "freewind.github.com:chrome-ts2kt:0.3.0"
+    implementation "freewind.github.com:kotlin-js-commons:0.6.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
+}
+
+kotlin {
+    js {
+        browser {
+            webpackTask {
+                cssSupport.enabled = true
+            }
+
+            runTask {
+                cssSupport.enabled = true
+            }
+
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    webpackConfig.cssSupport.enabled = true
+                }
+            }
+        }
+        binaries.executable()
+    }
+}
