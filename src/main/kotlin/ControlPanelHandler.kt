@@ -124,7 +124,7 @@ object ControlPanelHandler {
     }
 
     private fun setExpandAllCheckButtonCallback() {
-        (document.getElementById("expendAllChk") as HTMLInputElement?)?.let { checkInput ->
+        (document.getElementById("expandAllChk") as HTMLInputElement?)?.let { checkInput ->
             checkInput.onclick = {
                 GlobalScope.launch {
                     BookmarksHandler.expandBookmarks(checkInput.checked)
