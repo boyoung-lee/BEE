@@ -106,7 +106,7 @@ object ControlPanelHandler {
         var fromPicker = document.getElementById("datepickerFrom") as HTMLInputElement?
         var toPicker = document.getElementById("datepickerTo") as HTMLInputElement?
 
-        (document.getElementById("periodFull") as HTMLLabelElement?)?.onclick = {
+        (document.getElementById("periodFull") as HTMLButtonElement?)?.onclick = {
             fromPicker?.let {
                 it.value = ""
             }
